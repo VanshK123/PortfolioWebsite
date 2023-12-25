@@ -12,9 +12,18 @@
     cursor: pointer;
     border-bottom: 3px solid transparent;
     transition: border-bottom-color 0.3s;
+    width: 20vh;
   }
   
   .taskbar-tab.active {
     border-bottom-color: #007acc;
+    background-color: #1e1f2b;
   }
+
+.tab-icon
+{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
   
