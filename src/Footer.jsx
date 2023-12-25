@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-right">
             <button className="footer-right-item"><img src = {source} alt = "sourceControl" className = "footer-right-item" />master</button>
-            <button className = "footer-right-item"><img src = {error} alt = "error" className = "footer-right-item" /> 0 <img src = {warning} className = "footer-right-item" /> 0 </button>
+            <button className = "footer-right-item"><img src = {error} alt = "error" className = "footer-right-item" /> 0 <img src = {warning} alt = 'warning' className = "footer-right-item" /> 0 </button>
         </div>
         <div className="footer-left">
             <button className="footer-left-item">Ln 1, Col 1</button>
