@@ -1,6 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
 import files from './images/files.svg';
+import file from './images/file.svg';
 import gitLogo from './images/github-inverted.svg';
 import code from './images/code.svg';
 import email from './images/mail.svg';
@@ -13,6 +14,7 @@ import cssLogo from './images/css.png';
 import cppLogo from './images/ISO_C++_Logo.svg';
 import javaLogo from './images/java.svg';
 import pyLogo from './images/python-5.svg';
+import cLogo from './images/c.svg';
 
 const Sidebar = () => {
   return (
@@ -30,6 +32,9 @@ const Sidebar = () => {
           </button>
           <button className="sidebar-btn">
               <img src={email} alt="email" />
+          </button>
+          <button className="sidebar-btn">
+              <img src={file} alt="Resume" />
           </button>
         </div>
         <div className="sidebar-bottom">
@@ -51,9 +56,9 @@ const Sidebar = () => {
           <button className="sidebar-text"><img src = {cppLogo} alt='C++ Logo' className='logos'/>Projects.cpp</button>
           <button className="sidebar-text"><img src = {javaLogo} alt='Java Logo' className='logos'/>Compiler.java</button>
           <button className="sidebar-text"><img src = {pyLogo} alt='Python Logo' className='logos'/>GitHub.py</button>
+          <button className="sidebar-text"><img src = {cLogo} alt='C Logo' className='logos'/>Resume.c</button>
         </Collapsible>
       </div>
-
     </div>
     
   );

@@ -1,0 +1,21 @@
+.vscode-taskbar {
+    display: flex;
+    flex-direction: row;
+    background-color: #282a3a;
+    color: #eaf2f1;
+    width: 100%;
+    height: fit-content;
+    margin-left: 4.55%;
+  }
+  
+  .taskbar-tab {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.3s;
+  }
+  
+  .taskbar-tab.active {
+    border-bottom-color: #007acc; /* VS Code blue color */
+  }
+  
