@@ -1,0 +1,82 @@
+.vscode-footer {
+    background-color: #1e1f2b;
+    color: #888d94;
+    padding: 0.3%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer-content {
+    display: flex;
+  }
+  
+  .footer-content span {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .footer-right {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    align-items: center;
+  }
+    .footer-right-item {
+        display: flex;
+        background-color: #1e1f2b;
+        color: #888d94;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+        .footer-right-item:hover {
+            background-color: #2a2c36;
+        }
+
+  .footer-left {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    align-items: center;
+  }
+    .footer-left-item {
+        display: flex;
+        background-color: #1e1f2b;
+        color: #888d94;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+        .footer-left-item:hover {
+            background-color: #2a2c36;
+        }
+
+
+  .bell {
+    width: 12px;
+    height: 12px;
+  }
+
+  .warning {
+    width: 12px;
+    height: 12px;
+  }
+  .error{
+    width: 12px;
+    height: 12px;
+  }
+
+  .source {
+    width : 12px !important;
+    height : 12px !important;
+  }
+
+  .curlyBraces {
+    width : 12px !important;
+    height : 12px !important;
+  }

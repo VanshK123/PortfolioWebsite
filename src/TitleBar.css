@@ -1,0 +1,69 @@
+.title-bar {
+    display: flex;
+    align-items: center;
+    background-color: #1e1f2b;
+    color: #fff;
+    padding: 0.3%;
+    height: 25px;
+  }
+  
+  .title-bar-text {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .title-bar-controls {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .title-bar-btn {
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  .logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+
+  #minimize-btn {
+    background-color: #ffcc00;
+  }
+  
+  #maximize-btn {
+    background-color: #33cc33;
+  }
+  
+  #close-btn {
+    background-color: #ff3300;
+  }
+  
+  .title-bar-btns-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .title-bar-btns-left-btn {
+    display: flex;
+    background-color: #1e1f2b;
+    color: #888d94;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .title-bar-btns-left-btn:hover {
+    background-color: #2a2c36;
+  }
