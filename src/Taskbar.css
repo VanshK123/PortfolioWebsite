@@ -5,7 +5,6 @@
     color: #eaf2f1;
     width: 100%;
     height: fit-content;
-    margin-left: 4.55%;
   }
   
   .taskbar-tab {
@@ -16,6 +15,6 @@
   }
   
   .taskbar-tab.active {
-    border-bottom-color: #007acc; /* VS Code blue color */
+    border-bottom-color: #007acc;
   }
   
