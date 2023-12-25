@@ -17,6 +17,7 @@
     height: 14px;
     width: 14px;
     align-items: center;
+    display: inline;
   }
   
   .collapsible-icon.open {
@@ -26,5 +27,6 @@
   .collapsible-content {
     padding: 10px;
   }
+
 
   

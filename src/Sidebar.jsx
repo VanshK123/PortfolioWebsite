@@ -7,6 +7,12 @@ import email from './images/mail.svg';
 import account from './images/account.svg';
 import settings from './images/settings-gear.svg';
 import Collapsible from './Collapsible';
+import reactLogo from './images/logo192.png';
+import htmlLogo from './images/html.svg';
+import cssLogo from './images/css.png';
+import cppLogo from './images/ISO_C++_Logo.svg';
+import javaLogo from './images/java.svg';
+import pyLogo from './images/python-5.svg';
 
 const Sidebar = () => {
   return (
@@ -39,12 +45,12 @@ const Sidebar = () => {
       <div className="sidebar-divider">
         <div className='sidebar-text-header'> Explorer </div>
         <Collapsible title="Portfolio">
-          <div className="sidebar-text">App.js</div>
-          <div className="sidebar-text">index.js</div>
-          <div className="sidebar-text">TitleBar.jsx</div>
-          <div className="sidebar-text">Footer.jsx</div>
-          <div className="sidebar-text">Sidebar.jsx</div>
-          <div className="sidebar-text">Collapsible.jsx</div>
+          <button className="sidebar-text"><img src = {reactLogo} alt='React Logo' className='logos'/>Home.jsx</button>
+          <button className="sidebar-text"><img src = {htmlLogo} alt='HTML Logo' className='logos'/>About.html</button>
+          <button className="sidebar-text"><img src = {cssLogo} alt='CSS Logo' className='logos'/>Contact.css</button>
+          <button className="sidebar-text"><img src = {cppLogo} alt='C++ Logo' className='logos'/>Projects.cpp</button>
+          <button className="sidebar-text"><img src = {javaLogo} alt='Java Logo' className='logos'/>Compiler.java</button>
+          <button className="sidebar-text"><img src = {pyLogo} alt='Python Logo' className='logos'/>GitHub.py</button>
         </Collapsible>
       </div>
 
