@@ -3,7 +3,7 @@ import './Collapsible.css';
 import chevronIcon from './images/chevron-right.svg';
 
 const Collapsible = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleCollapsible = () => {
     setIsOpen(!isOpen);

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Taskbar.css'; // Import your CSS file for styling
 import reactLogo from './images/logo192.png';
 import htmlLogo from './images/html.svg';
@@ -9,20 +10,22 @@ import pyLogo from './images/python-5.svg';
 import cLogo from './images/c.svg';
 
 const tabsData = [
-  { id: 1, title: 'home.jsx', icon: reactLogo },
-  { id: 2, title: 'about.html', icon: htmlLogo },
-  { id: 3, title: 'contact.css', icon: cssLogo },
-  { id: 4, title: 'projects.cpp', icon: cppLogo },
-  { id: 5, title: 'compiler.java', icon: javaLogo },
-  { id: 6, title: 'github.py', icon: pyLogo },
-  { id: 7, title: 'resume.c', icon: cLogo },
+  { id: 1, title: 'home.jsx', icon: reactLogo, link: '/' },
+  { id: 2, title: 'about.html', icon: htmlLogo, link: '/about' },
+  { id: 3, title: 'contact.css', icon: cssLogo, link: '/contact' },
+  { id: 4, title: 'projects.cpp', icon: cppLogo, link: '/projects' },
+  { id: 5, title: 'compiler.java', icon: javaLogo, link: '/compiler' },
+  { id: 6, title: 'github.py', icon: pyLogo, link: '/github' },
+  { id: 7, title: 'resume.c', icon: cLogo, link: '/resume' },
 ];
 
 const Taskbar = () => {
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
-  const handleTabClick = (tabId) => {
+  const handleTabClick = (tabId, link) => {
     setActiveTab(tabId);
+    navigate(link); // Use navigate to navigate to the specified link
   };
 
   return (
@@ -31,10 +34,12 @@ const Taskbar = () => {
         <div
           key={tab.id}
           className={`taskbar-tab ${tab.id === activeTab ? 'active' : ''}`}
-          onClick={() => handleTabClick(tab.id)}
+          onClick={() => handleTabClick(tab.id, tab.link)} // Pass the link to handleTabClick
         >
-          <img src={tab.icon} alt={tab.title} className="tab-icon" />
-          {tab.title}
+          <div className="tab-content">
+            <img src={tab.icon} alt={`Icon for ${tab.title}`} className="tab-icon" />
+            {tab.title}
+          </div>
         </div>
       ))}
     </div>

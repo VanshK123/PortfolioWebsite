@@ -5,8 +5,9 @@ import './HomePage.css';
 const HomePage = () => {
   return (
     <div className="home-container">
+      <div className="home-background"></div>
       <div className="home-content">
-        <h1>Vansh Khanna</h1>
+        <h1 className='homePageH1'>Vansh Khanna</h1>
         <Typed
           strings={['Software Developer', 'Problem Solver', 'OS and Compilers Enthusiast', 'Computer Engineer']}
           typeSpeed={60}
@@ -14,10 +15,13 @@ const HomePage = () => {
           backDelay={1000}
           showCursor
           cursorChar="|"
+          loop
           className="typed-text"
         />
-        <p>Welcome to my portfolio website. I am a senior in computer engineering at Purdue University and I love building new things.</p>
-        <button>Contact Me</button>
+        <br />
+        <p className='homePageText'>Software Developer, interested in high performance systems</p>
+        <br />
+        <button className='button'>Contact Me</button>
       </div>
     </div>
   );

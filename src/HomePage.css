@@ -1,0 +1,67 @@
+.home-container {
+    position: relative;
+    height: 85vh; 
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/homeBackground.jpg'); /* Adjust the path based on your project structure */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(65%);
+  }
+  
+  
+  .home-content {
+    z-index: 1;
+    text-align: left;
+    color: #fff;
+    font-family: JetBrains Mono,monospace;
+    font-size: 4 rem;
+    margin-left: 5rem;
+  }
+
+  .homePageH1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: JetBrains Mono,monospace;
+  }
+
+  .homePageText {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: JetBrains Mono,monospace;
+  }
+  .typed-text{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: JetBrains Mono,monospace;
+    margin-left: 1.8rem;
+  }
+
+  
+  .button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-family: JetBrains Mono,monospace;
+    margin-left: 1rem;
+  }
+

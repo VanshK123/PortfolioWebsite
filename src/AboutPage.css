@@ -1,0 +1,29 @@
+.about-page {
+    background-color: #24292e;
+    height: 88vh;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #007acc; /* VS Code blue color */
+    font-family:JetBrains Mono,monospace;
+    display: flex;
+    justify-content: left;
+    margin-left: 1.5rem;
+    font-size: 3rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #efefef;
+    font-family:JetBrains Mono,monospace;
+    display: inline-block;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    justify-items: start;
+    line-break: strict;
+    text-align: left;
+    text-justify: inter-word;
+  }
+  
