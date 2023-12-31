@@ -8,6 +8,7 @@ import Taskbar from './Taskbar';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
+import Projects from './Projects';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/projects" element={<Projects />} />
             </Routes>
           </div>
         </div>
