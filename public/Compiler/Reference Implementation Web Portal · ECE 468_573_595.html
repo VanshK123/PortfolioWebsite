@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Reference Implementation Web Portal  · ECE 468/573/595</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="">
+
+<meta name="keywords" content="">
+
+
+<meta property="og:title" content="Reference Implementation Web Portal  · ECE 468/573/595 ">
+<meta property="og:site_name" content="ECE 468/573/595">
+<meta property="og:url" content="https://cap.ecn.purdue.edu/compilers/reference/">
+<meta property="og:locale" content="en-us">
+
+
+<meta property="og:type" content="article">
+<meta property="og:description" content="">
+<meta property="og:article:published_time" content="0001-01-01T00:00:00Z">
+<meta property="og:article:modified_time" content="0001-01-01T00:00:00Z">
+
+  
+
+  
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title" content="Reference Implementation Web Portal">
+<meta name="twitter:description" content="">
+<meta name="twitter:url" content="https://cap.ecn.purdue.edu/compilers/reference/">
+<meta name="twitter:domain" content="https://cap.ecn.purdue.edu/compilers/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Reference Implementation Web Portal",
+    "author": {
+      "@type": "Person",
+      "name": ""
+    },
+    "datePublished": "0001-01-01",
+    "description": "",
+    "wordCount":  51 
+  }
+</script>
+
+
+<link rel="canonical" href="https://cap.ecn.purdue.edu/compilers/reference/">
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cap.ecn.purdue.edu/touch-icon-144-precomposed.png">
+<link href="https://cap.ecn.purdue.edu/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.101.0">
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href="./Reference Implementation Web Portal · ECE 468_573_595_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Reference Implementation Web Portal · ECE 468_573_595_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Reference Implementation Web Portal · ECE 468_573_595_files/style.css">
+<link rel="stylesheet" href="./Reference Implementation Web Portal · ECE 468_573_595_files/custom.css">
+
+
+  
+  
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper">
+  
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  
+
+<div class="container">
+    <div class="row container">
+        <div class="double-column container">
+          <center><h2>Input</h2></center>
+          <textarea cols="50" rows="10" class="textbox center-block" id="inbox" placeholder="Please put input for the compiler here." control-id="ControlID-1"></textarea>
+        </div>
+        <div class="double-column container">
+          <center><h2>Output</h2></center>
+          <textarea cols="50" rows="10" class="textbox center-block" id="outbox" placeholder="Output of the compiler would be here." readonly="" control-id="ControlID-2"></textarea>
+        </div>
+    </div>
+    
+    <div align="center" class="container">
+        <button id="run-btn" class="button" control-id="ControlID-4">Run</button>
+        <button id="clear-btn" class="button" control-id="ControlID-5">Clear</button>
+    </div>
+</div>
+<script src="./Reference Implementation Web Portal · ECE 468_573_595_files/jquery.min.js.download"></script>
+<script>
+    $(function(){
+        var baseurl = "https:\/\/cap.ecn.purdue.edu\/ECE468Ref\/";
+
+        function runCompiler() {
+            var requestUrl = baseurl + "step/" + 7;
+            var input = $("#inbox").val();
+            $("#outbox").val("Running...");
+            $("#run-btn").off();
+            $.ajax({
+                url: requestUrl,
+                contentType: "text/plain",
+                dataType: "text",
+                method: "POST",
+                data: input
+            }).done(function(data, tStatus, xhr){
+                $("#outbox").val(data);
+                $("#run-btn").click(runCompiler);
+            }).fail(function(xhr, tStatus, err){
+                $("#outbox").val("");
+                alert("Request failed");
+                $("#run-btn").click(runCompiler);
+            });
+        }
+
+        $("#run-btn").click(runCompiler);
+        $("#clear-btn").click(function(){
+            $("#inbox").val("");
+            $("#outbox").val("");
+        });
+    });
+</script>
+  
+</article>
+
+
+    </main>
+    
+
+
+    
+  
+
+
+</body></html>
