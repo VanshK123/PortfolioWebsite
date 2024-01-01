@@ -1,7 +1,8 @@
 .projects {
   background-color: #24292e;
-  height: 88vh;
   align-items: center;
+  height: 88vh;
+  overflow-y: auto;
 }
 
 .projects h2 {

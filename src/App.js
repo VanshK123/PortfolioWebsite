@@ -21,14 +21,16 @@ function App() {
           <Sidebar />
           <div className='main-content'>
             <Taskbar />
-            <Routes>  
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/resume" element={<ResumePage />} />
-              <Route path="/compiler" element={<CompilerPage />} />
-            </Routes>
+            <div className='pages'>
+              <Routes>  
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/resume" element={<ResumePage />} />
+                <Route path="/compiler" element={<CompilerPage />} />
+              </Routes>
+            </div>
           </div>
         </div>
         <div className='footer'>
