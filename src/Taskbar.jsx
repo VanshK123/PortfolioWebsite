@@ -15,8 +15,7 @@ const tabsData = [
   { id: 3, title: 'contact.css', icon: cssLogo, link: '/contact' },
   { id: 4, title: 'projects.cpp', icon: cppLogo, link: '/projects' },
   { id: 5, title: 'compiler.java', icon: javaLogo, link: '/compiler' },
-  { id: 6, title: 'github.py', icon: pyLogo, link: '/github' },
-  { id: 7, title: 'resume.c', icon: cLogo, link: '/resume' },
+  { id: 6, title: 'resume.c', icon: cLogo, link: '/resume' },
 ];
 
 const Taskbar = () => {
