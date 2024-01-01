@@ -20,6 +20,7 @@ const HomePage = () => {
         />
         <br />
         <p className='homePageText'>Software Developer, interested in high performance systems</p>
+        <p className='homePageText'>Checkout a fully working C compiler on the compiler page</p>
         <br />
         <button className='button'>Contact Me</button>
       </div>
