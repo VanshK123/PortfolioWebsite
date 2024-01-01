@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Sidebar.css';
 import files from './images/files.svg';
 import file from './images/file.svg';
@@ -13,36 +14,41 @@ import htmlLogo from './images/html.svg';
 import cssLogo from './images/css.png';
 import cppLogo from './images/ISO_C++_Logo.svg';
 import javaLogo from './images/java.svg';
-import pyLogo from './images/python-5.svg';
 import cLogo from './images/c.svg';
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (link) => {
+    navigate(link); 
+  };
+
   return (
     <div className='bigSidebar'>
       <div className="vscode-sidebar">
         <div className="sidebar-top">
-          <button className="sidebar-btn">
-              <img src={files} alt="files" />
+          <button className="sidebar-btn" onClick={() => handleNavigation('/')}>
+            <img src={files} alt="files" />
           </button>
-          <button className="sidebar-btn">
-              <img src={gitLogo} alt="git" />
+          <button className="sidebar-btn" onClick={() => handleNavigation('/git')}>
+            <img src={gitLogo} alt="git" />
           </button>
-          <button className="sidebar-btn">
-              <img src={code} alt="code" />
+          <button className="sidebar-btn" onClick={() => handleNavigation('/projects')}>
+            <img src={code} alt="code" />
           </button>
-          <button className="sidebar-btn">
-              <img src={email} alt="email" />
+          <button className="sidebar-btn" onClick={() => handleNavigation('/contact')}>
+            <img src={email} alt="email" />
           </button>
-          <button className="sidebar-btn">
-              <img src={file} alt="Resume" />
+          <button className="sidebar-btn" onClick={() => handleNavigation('/resume')}>
+            <img src={file} alt="Resume" />
           </button>
         </div>
         <div className="sidebar-bottom">
-          <button className="sidebar-btn">
-              <img src={account} alt="account" />
+          <button className="sidebar-btn" onClick={() => handleNavigation('/contact')}>
+            <img src={account} alt="account" />
           </button>
-          <button className="sidebar-btn">
-              <img src={settings} alt="settings" />
+          <button className="sidebar-btn" onClick={() => handleNavigation('/')}>
+            <img src={settings} alt="settings" />
           </button>
         </div>
       </div>
@@ -50,17 +56,26 @@ const Sidebar = () => {
       <div className="sidebar-divider">
         <div className='sidebar-text-header'> Explorer </div>
         <Collapsible title="Portfolio">
-          <button className="sidebar-text"><img src = {reactLogo} alt='React Logo' className='logos'/>Home.jsx</button>
-          <button className="sidebar-text"><img src = {htmlLogo} alt='HTML Logo' className='logos'/>About.html</button>
-          <button className="sidebar-text"><img src = {cssLogo} alt='CSS Logo' className='logos'/>Contact.css</button>
-          <button className="sidebar-text"><img src = {cppLogo} alt='C++ Logo' className='logos'/>Projects.cpp</button>
-          <button className="sidebar-text"><img src = {javaLogo} alt='Java Logo' className='logos'/>Compiler.java</button>
-          <button className="sidebar-text"><img src = {pyLogo} alt='Python Logo' className='logos'/>GitHub.py</button>
-          <button className="sidebar-text"><img src = {cLogo} alt='C Logo' className='logos'/>Resume.c</button>
+          {[
+            { icon: reactLogo, title: 'Home.jsx', link: '/' },
+            { icon: htmlLogo, title: 'About.html', link: '/about' },
+            { icon: cssLogo, title: 'Contact.css', link: '/contact' },
+            { icon: cppLogo, title: 'Projects.cpp', link: '/projects' },
+            { icon: javaLogo, title: 'Compiler.java', link: '/compiler' },
+            { icon: cLogo, title: 'Resume.c', link: '/resume' },
+          ].map((item, index) => (
+            <button
+              key={index}
+              className="sidebar-text"
+              onClick={() => handleNavigation(item.link)}
+            >
+              <img src={item.icon} alt={`${item.title} Logo`} className='logos' />
+              {item.title}
+            </button>
+          ))}
         </Collapsible>
       </div>
     </div>
-    
   );
 };
 
