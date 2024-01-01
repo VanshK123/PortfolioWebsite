@@ -18,10 +18,16 @@ import cLogo from './images/c.svg';
 
 const Sidebar = () => {
   const navigate = useNavigate();
-
   const handleNavigation = (link) => {
-    navigate(link); 
+    // Check if the link is /git, and redirect to GitHub if true
+    if (link === '/git') {
+      window.location.href = 'https://github.com/VanshK123';
+    } else {
+      // For other links, use navigate as usual
+      navigate(link);
+    }
   };
+
 
   return (
     <div className='bigSidebar'>
