@@ -1,51 +1,49 @@
-// In your React component file
-
 import React from "react";
-import "./Projects.css"; // Replace with your actual CSS file path
+import "./Projects.css"; 
+
+import serverIMG from "./images/MultiThreaded.png";
+import OSIMG from "./images/operating-system.png";
+import emsIMG from "./images/ems.png";
+import MovieFinder from "./images/IMDB_Logo_2016.svg";
+import compilerIMG from "./images/compiler.png";
 
 const projects = [
   {
     id: 1,
-    name: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    link: 'https://example.com/project1',
-    image: 'https://example.com/project1-image.jpg',
-    technologies: ['React', 'Node.js', 'MongoDB'], // Add the technologies used
+    name: 'Multi threaded C++ Server',
+    description: 'Created a high-performance, stable C++ multi-threaded server with efficient TCP communication for concurrent client request handling through advanced programming and rigorous testing.',
+    image: serverIMG,
+    technologies: ['C++', 'Multi-threading', 'TCP', 'OOP'], 
   },
   {
     id: 2,
-    name: 'Project 2',
-    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    link: 'https://example.com/project2',
-    image: 'https://example.com/project2-image.jpg',
-    technologies: ['Vue.js', 'Express', 'MySQL'], // Add the technologies used
+    name: 'Developed a Linux distro',
+    description: 'Optimized memory with one and two-level paging, implemented multi-threading and dynamic task scheduling, integrated trap handling mechanisms, and developed a comprehensive file system module for efficient data management and system responsiveness.',
+    image: OSIMG,
+    technologies: ['C', 'Paging', 'Scheduling', 'Traps', 'File system'],
   },
   {
     id: 3,
-    name: 'Project 3',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    link: 'https://example.com/project3',
-    image: 'https://example.com/project3-image.jpg',
-    technologies: ['Angular', 'Django', 'PostgreSQL'], // Add the technologies used
+    name: 'Employee Information Management System',
+    description: 'Designed and deployed a comprehensive Employee Information Management System, demonstrating proficiency in React for the frontend, Java for the backend API, MySQL for database management, and integration of RESTful endpoints for real-time updates.',
+    image: emsIMG,
+    technologies: ['React', 'Java', 'MySQL', 'RESTful API'], 
   },
   {
     id: 4,
-    name: 'Project 4',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    link: 'https://example.com/project4',
-    image: 'https://example.com/project4-image.jpg',
-    technologies: ['React', 'Node.js', 'MongoDB'], // Add the technologies used
+    name: 'Movie finder web app ',
+    description: 'Developed a dynamic Movie Finder web app, showcasing expertise in Angular for the frontend, Node.js for the backend, and integration of external APIs like IMDB for real-time movie data.',
+    image: MovieFinder,
+    technologies: ['Angular', 'Node.js', 'APIs'],
   },
   {
     id: 5,
-    name: 'Project 5',
-    description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    link: 'https://example.com/project5',
-    image: 'https://example.com/project5-image.jpg',
-    technologies: ['Vue.js', 'Express', 'MySQL'], // Add the technologies used
+    name: 'Compiler ',
+    description: 'Developed a compiler with a highly efficient scanner and lexer, a robust Abstract Syntax Trees (ASTs) framework, versatile code generation engine, comprehensive control structure handling, function management, advanced register allocation algorithm, and extended capabilities for pointers and arrays, along with robust error handling.',
+    image: compilerIMG,
+    technologies: ['Java', 'ASTs', 'CodeGeneration', 'Optimization','Parsing'],
   },
 
-  // Add more projects as needed
 ];
 
 const Projects = () => {
