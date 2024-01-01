@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: left;
+    overflow-y: auto;
   }
 
   .home-background {
@@ -16,6 +17,7 @@
     background-size: cover;
     background-position: center;
     filter: brightness(65%);
+    overflow-y: auto;
   }
   
   

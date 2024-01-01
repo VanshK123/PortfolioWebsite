@@ -12,6 +12,7 @@
     background-color: #171920;
     align-items: center;
     padding: 10px;
+    overflow-y: auto;
   }
   
   .sidebar-top {
