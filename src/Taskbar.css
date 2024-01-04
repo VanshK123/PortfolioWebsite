@@ -4,6 +4,7 @@
     background-color: #282a3a;
     color: #eaf2f1;
     width: 100%;
+    overflow-x: auto;
     height: fit-content;
   }
   

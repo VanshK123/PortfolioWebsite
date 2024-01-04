@@ -3,9 +3,18 @@ import Resume from "./Resume.pdf";
 
 function ResumePage() {
   return (
-    <div>
-      <object width="99.9%" height="600" data={Resume} type="application/pdf"> 
-        <p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href={Resume}>click here to download the PDF file.</a></p>
+    <div style={{ minHeight: "100%", overflow: "hidden" }}>
+      <object
+        width="100%"
+        height="100%"
+        data={Resume}
+        type="application/pdf"
+      >
+        {/* Fallback content or message if PDF cannot be displayed */}
+        <p>
+          It appears your browser doesn't support embedded PDFs. You can
+          download the PDF <a href={Resume}>here</a>.
+        </p>
       </object>
     </div>
   );

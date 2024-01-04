@@ -1,10 +1,11 @@
 .home-container {
-    position: relative;
-    height: 85vh; 
+    position: relative;;
     display: flex;
     align-items: center;
     justify-content: left;
-    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
   }
 
   .home-background {
