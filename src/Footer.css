@@ -3,9 +3,10 @@
     color: #888d94;
     bottom: 0;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-    height: 1.4rem;
     width: 100%;
     overflow-x: auto;
+    height: fit-content;
+    position: fixed;
   }
   
   .footer-content {

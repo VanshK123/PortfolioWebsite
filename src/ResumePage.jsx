@@ -11,9 +11,9 @@ function ResumePage() {
         type="application/pdf"
       >
         {/* Fallback content or message if PDF cannot be displayed */}
-        <p>
+        <p style={{ color: "black" }}>
           It appears your browser doesn't support embedded PDFs. You can
-          download the PDF <a href={Resume}>here</a>.
+          download the PDF <a href='https://www.linkedin.com/in/vansh-khanna-7026741b3/'>here</a>.
         </p>
       </object>
     </div>
