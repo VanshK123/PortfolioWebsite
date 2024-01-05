@@ -6,6 +6,7 @@ import OSIMG from "./images/operating-system.png";
 import emsIMG from "./images/ems.png";
 import MovieFinder from "./images/IMDB_Logo_2016.svg";
 import compilerIMG from "./images/compiler.png";
+import plantIMG from "./images/plant.png";
 
 const projects = [
   {
@@ -42,6 +43,13 @@ const projects = [
     description: 'Developed a compiler with a highly efficient scanner and lexer, a robust Abstract Syntax Trees (ASTs) framework, versatile code generation engine, comprehensive control structure handling, function management, advanced register allocation algorithm, and extended capabilities for pointers and arrays, along with robust error handling.',
     image: compilerIMG,
     technologies: ['Java', 'ASTs', 'CodeGeneration', 'Optimization','Parsing'],
+  },
+  {
+    id: 6,
+    name: 'Plant monitor dashboard',
+    description: 'Engineered a responsive Plant Monitor Dashboard with real-time data visualization, download capabilities, and secure MySQL database integration, fostering proactive decision-making and seamless collaboration.',
+    image: plantIMG,
+    technologies: ['React', 'MySQL', 'RESTful API', 'Data visualization'],
   },
 
 ];

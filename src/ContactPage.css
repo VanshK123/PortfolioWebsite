@@ -1,29 +1,27 @@
 .vscode-container {
     background-color: #24292e;
     height: 100%;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start;
 }
 
 .h1 {
     color: #007acc;
     font-family: 'JetBrains Mono', monospace;
     font-size: 3rem;
-
 }
 
 .h1 a {
-    color: #007acc; /* Set link color */
-    text-decoration: none; /* Remove underlines */
+    color: #007acc;
+    text-decoration: none;
 }
 
 .h1 a:hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
 }
 
-/* Style for other content */
 .vscode-container div {
     color: white;
-    margin-bottom: 0.5rem; /* Add margin between each line of content */
+    margin-bottom: 0.5rem;
 }
 
 .vscode-container span {
@@ -38,11 +36,40 @@
     text-decoration: underline;
 }
 
-.content {
+.vscode-container .content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     font-size: 2rem;
     margin-left: 1.5rem;
+}
+
+.vscode-container form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.vscode-container label {
+    margin-bottom: 0.5rem;
+    color: #007acc;
+}
+
+.vscode-container input,
+.vscode-container textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.vscode-container button {
+    background-color: #007acc;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.vscode-container button:hover {
+    background-color: #005fa3;
 }
